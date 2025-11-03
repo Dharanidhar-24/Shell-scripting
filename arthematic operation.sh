@@ -12,3 +12,10 @@ echo "MULTI: $(($a*$b))"
 echo "DIV: $(($a/$b))"
 echo
 echo "--------------------------------"
+let sum=$c+$d
+let sub=$c-$d
+echo
+echo "Addition: $sum"
+echo "Subration: $sub"
+
+
