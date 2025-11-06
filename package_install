@@ -1,0 +1,17 @@
+#!/bin/bash
+
+USER_ID=$(id -u)
+
+if [ $USER_ID -ne 0 ]; then
+echo "Error: please run this script with the root privilages"
+exit 1 # It will stop the execution here only because of failure.
+fi
+
+dnf install mysql -y
+
+if [ $? -ne 0 ]; then
+echo "Error: installation is failure"
+exit 1 #It will stop the execution here only because of failure.
+else 
+echo "Mysql is installed successfully"
+fi
